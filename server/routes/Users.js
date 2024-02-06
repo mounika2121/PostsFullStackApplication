@@ -3,6 +3,7 @@ const router = express.Router();
 const { Users } = require("../models");
 const bcrypt = require('bcrypt');
 const {sign} = require("jsonwebtoken");
+const { validationToken } = require("../middlewares/Authmiddleware");
 
 router.post('/', async (req, res) => {
     const { username, password } = req.body;
@@ -46,6 +47,10 @@ router.post("/login", async (req, res) => {
         return res.status(500).json({ error: "Internal Server Error" });
     }
 });
+
+router.get("/auth", validationToken, (req, res) => {
+    res.json(req.user);
+})
 
 
 module.exports = router;

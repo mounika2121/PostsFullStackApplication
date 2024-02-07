@@ -40,7 +40,7 @@ router.post("/login", async (req, res) => {
                 "importentsecret"
                 );
 
-            return res.json(accessToken);
+            return res.json({token: accessToken, username: username, id: user.id});
         });
     } catch (error) {
         console.error("Error:", error);

@@ -1,0 +1,25 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .post-list{
+    width: 650px;
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .post-list{
+      width: 100%;
+    }
+    .App{
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  

@@ -1,0 +1,16 @@
+.registration-containner{
+    background-color: white;
+    border: 3px solid rgb(76, 166, 222);
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 768px){
+    .registration-containner{
+        width: 300px;
+    }
+}

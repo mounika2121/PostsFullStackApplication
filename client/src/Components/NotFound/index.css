@@ -1,0 +1,22 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-top: 10px;
+  }
+  
+  .not-found-img {
+    width: 500px;
+  }
+
+  .page-notfound{
+    color: gray;
+  }
+
+  @media screen and (max-width: 768px){
+    .not-found-img{
+        width: 300px;
+    }
+  }

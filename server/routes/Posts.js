@@ -32,6 +32,18 @@ router.post('/',validationToken, async (req, res) => {
     res.json(post);
 });
 
+router.put('/title',validationToken, async (req, res) => {
+    const {newTitle, id} = req.body;
+    await Posts.update({title: newTitle},{where: {id: id}});
+    res.json(newTitle);
+});
+
+router.put('/postText',validationToken, async (req, res) => {
+    const {newText, id} = req.body;
+    await Posts.update({postText: newText},{where: {id: id}});
+    res.json(newText);
+});
+
 router.delete('/:postId', validationToken, async (req, res) => {
     const postId = req.params.postId;
 
